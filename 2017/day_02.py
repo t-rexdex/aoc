@@ -20,11 +20,15 @@ def find_max_and_min(lst: list[str]) -> dict:
     return difference_int
 
 
-if __name__ == "__main__":
-    file = "./inputs/day_02.csv"
+def part_one(file):
     parsed_list = parse_input_file(file)
     tmp = 0
     for row in parsed_list:
         tmp += find_max_and_min(row)
 
     print(tmp)
+
+
+if __name__ == "__main__":
+    my_file = "./inputs/day_02.csv"
+    part_one(my_file)
