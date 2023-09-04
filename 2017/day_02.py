@@ -16,13 +16,17 @@ def parse_input_file(file: str) -> list[list[str]]:
     return new_list
 
 
-def find_max(lst: list[str]) -> int:
-    max_int = 0
-    return max_int
+def find_max_and_min(lst: list[str]) -> dict:
+    difference_int = max(lst) - min(lst)
+    return difference_int
 
 
 if __name__ == "__main__":
     file = "./inputs/day_02.csv"
     parsed_list = parse_input_file(file)
+    tmp = 0
+    for row in parsed_list:
+        tmp += find_max_and_min(row)
 
+    print(tmp)
     # pp(len(new_list))
