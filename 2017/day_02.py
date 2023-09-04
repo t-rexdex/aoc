@@ -12,7 +12,6 @@ def parse_input_file(file: str) -> list[list[str]]:
             line_str = row[0].split("\t")
             line_int = list(map(int, line_str))
             new_list.append(line_int)
-
     return new_list
 
 
@@ -29,4 +28,3 @@ if __name__ == "__main__":
         tmp += find_max_and_min(row)
 
     print(tmp)
-    # pp(len(new_list))
