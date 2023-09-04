@@ -15,20 +15,25 @@ def parse_input_file(file: str) -> list[list[str]]:
     return new_list
 
 
-def find_max_and_min(lst: list[str]) -> dict:
+def find_max_and_min_difference(lst: list[str]) -> int:
     difference_int = max(lst) - min(lst)
     return difference_int
 
 
-def part_one(file):
-    parsed_list = parse_input_file(file)
+def part_one(list_to_parse):
     tmp = 0
-    for row in parsed_list:
-        tmp += find_max_and_min(row)
-
+    for row in list_to_parse:
+        tmp += find_max_and_min_difference(row)
     print(tmp)
+
+
+def find_even_divisibles(lst: list[str]) -> int:
+    x = len(lst)
+    # while i <= x:
 
 
 if __name__ == "__main__":
     my_file = "./inputs/day_02.csv"
+    parsed_list = parse_input_file(my_file)
+
     part_one(my_file)
